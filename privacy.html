@@ -65,7 +65,7 @@ section[lang]:not(.on),span[lang]:not(.on){display:none}
   <div class="top">
     <div>
       <h1>TweeTok</h1>
-      <p class="sub"><span lang="zh" class="on">隐私政策</span><span lang="en">Privacy Policy</span> · <span lang="zh" class="on">生效日期：2026 年 9 月 5 日</span><span lang="en">Effective: 5 September 2026</span></p>
+      <p class="sub"><span lang="zh" class="on">隐私政策</span><span lang="en">Privacy Policy</span> · <span lang="zh" class="on">生效日期：2026 年 9 月 7 日</span><span lang="en">Effective: 7 September 2026</span></p>
     </div>
     <div class="langs" role="group" aria-label="Language">
       <button type="button" data-lang="zh" aria-pressed="true">中文</button>
@@ -79,7 +79,7 @@ section[lang]:not(.on),span[lang]:not(.on){display:none}
 
 <p>TweeTok（下称「本应用」）是一款独立开发的第三方媒体浏览工具。本政策说明本应用收集哪些信息、为什么收集、存放在哪里，以及你如何控制这些信息。</p>
 
-<div class="note"><p><strong>一句话概括：</strong>你的 X 登录凭据只保存在你自己的设备上，我们看不到，也永远不会上传。但本应用确实会把匿名之外的使用数据——包括你的 X 用户 ID、handle，以及你浏览了哪些推文——发送给第三方分析服务 PostHog。详见第 2 节。</p></div>
+<div class="note"><p><strong>一句话概括：</strong>你的 X 登录凭据只保存在你自己的设备上，我们看不到，也永远不会上传。使用分析数据以一个与你的 X 账号无关的随机 ID 上报，我们无法把任何记录关联回你的真实身份。详见第 2 节。</p></div>
 
 <h2>1. 本应用不做什么</h2>
 <ul>
@@ -101,20 +101,21 @@ section[lang]:not(.on),span[lang]:not(.on){display:none}
 </ul>
 
 <h3>2.2 使用分析数据（发送给 PostHog）</h3>
-<p>本应用使用 <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog</a> 分析功能使用情况，数据发送至其位于美国的服务器（<code>us.i.posthog.com</code>）。上报内容包括：</p>
+<p>本应用使用 <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog</a> 分析功能使用情况，数据发送至其位于美国的服务器（<code>us.i.posthog.com</code>）。</p>
+<p><strong>这些数据以匿名方式上报。</strong>用于区分用户的标识符是一个在你设备上随机生成的 UUID，与你的 X 账号没有任何数学或逻辑关联；「X 账号 → 随机 ID」的对应关系只保存在你设备的 Keychain 中，永不离开设备。因此分析服务上不存在、也无法推导出你的 X 身份。上报内容包括：</p>
 
 <div class="tablewrap"><table>
 <thead><tr><th>类别</th><th>具体内容</th><th>用途</th></tr></thead>
 <tbody>
-<tr><td>账号标识</td><td>你的 X 用户 ID 与 X 用户名（handle）</td><td>区分不同用户的使用情况</td></tr>
-<tr><td>浏览行为</td><td>你查看的推文 ID、该推文作者的 ID 与用户名、所在时间线、是否含媒体</td><td>了解内容消费方式，优化浏览体验</td></tr>
+<tr><td>匿名标识</td><td>设备本地随机生成的 UUID</td><td>区分不同用户的使用情况</td></tr>
+<tr><td>浏览行为</td><td>你查看的推文 ID、该推文作者的 ID、所在时间线、是否含媒体</td><td>了解内容消费方式，优化浏览体验</td></tr>
 <tr><td>操作事件</td><td>点赞、收藏、转发、评论、翻译、缓存、搜索、切换时间线、进入全屏等动作</td><td>了解功能使用率</td></tr>
-<tr><td>外链点击</td><td>你在应用内点开的推文外部链接地址</td><td>诊断链接打开失败</td></tr>
+<tr><td>外链点击</td><td>你点开的外部链接的<strong>域名</strong>（不含路径与查询参数）</td><td>诊断链接打开失败</td></tr>
 <tr><td>设备与应用信息</td><td>设备型号、系统版本、应用版本、语言、启动与前后台切换事件</td><td>兼容性与稳定性排查</td></tr>
 </tbody>
 </table></div>
 
-<div class="note"><p><strong>请特别注意：</strong>上述分析数据与你的 X 用户 ID 相关联，因此<strong>不是匿名的</strong>。这意味着 PostHog 上存有一份「某个 X 账号浏览过哪些推文」的记录。我们不会将这份数据用于分析之外的任何目的，也不会与第三方共享，但你有权知道它的存在。如果你不接受这一点，请不要使用本应用。</p></div>
+<div class="note"><p><strong>不上报的内容：</strong>你的 X 用户 ID、X 用户名（handle）、你所浏览作者的用户名、外部链接的完整地址，均<strong>不会</strong>发送给分析服务。你的登录凭据在任何情况下都不会离开设备。本应用未接入广告 SDK，不做跨应用或跨网站追踪，不请求 App Tracking Transparency 权限。</p></div>
 
 <h3>2.3 保存在你设备上的本地数据</h3>
 <p>以下数据只存在于你的设备，不会离开设备：</p>
@@ -149,7 +150,7 @@ section[lang]:not(.on),span[lang]:not(.on){display:none}
 <h2>5. 数据跨境传输与保留</h2>
 <ul>
   <li>分析数据存放在 PostHog 位于<strong>美国</strong>的服务器上。若你身处欧洲经济区、英国或其他地区，这构成一次跨境传输。</li>
-  <li>分析数据的保留期遵循 PostHog 的默认策略；你可随时要求我们删除与你的 X 用户 ID 关联的全部分析记录。</li>
+  <li>分析数据的保留期遵循 PostHog 的默认策略。由于数据已匿名化，其中不含可用于定位到你个人的字段。</li>
   <li>本地数据在你卸载应用时随之删除。</li>
 </ul>
 
@@ -157,8 +158,8 @@ section[lang]:not(.on),span[lang]:not(.on){display:none}
 <ul>
   <li><strong>删除登录凭据：</strong>在应用内退出登录，Keychain 中的对应凭据会被立即清除。</li>
   <li><strong>清除本地缓存：</strong>设置页提供「清除图片缓存」与「清除已读记录」；离线缓存的推文可在缓存列表中单条或全部删除。</li>
-  <li><strong>删除分析数据：</strong>发邮件到下方联系邮箱，附上你的 X 用户名，我们会在 30 天内删除 PostHog 上与该账号关联的全部记录。</li>
-  <li><strong>访问与更正：</strong>你可以要求我们提供一份与你关联的分析数据副本。</li>
+  <li><strong>重置分析标识：</strong>退出登录会同时清除设备上的随机分析 ID；再次登录会生成一个全新的 ID，此前的记录无法与新 ID 关联。这是你可以自行完成的、最彻底的「断开关联」操作。</li>
+  <li><strong>关于删除请求：</strong>由于分析数据不含任何可识别你身份的信息，我们无法在收到请求时定位属于你的记录，因此无法执行针对个人的删除或导出。这是匿名化处理的必然结果，也意味着这些数据在 GDPR 意义上不构成个人数据。若你希望核实这一点，欢迎来信询问。</li>
   <li>如你位于欧洲经济区或英国，你另享有 GDPR 下的反对处理、限制处理与数据可携权；如你位于加利福尼亚州，你享有 CCPA 下的知情与删除权（我们从不出售个人信息）。</li>
 </ul>
 
@@ -183,7 +184,7 @@ section[lang]:not(.on),span[lang]:not(.on){display:none}
 
 <p>TweeTok (the "app") is an independently developed third-party media viewer. This policy explains what information the app collects, why, where it is stored, and how you can control it.</p>
 
-<div class="note"><p><strong>In one sentence:</strong> your X credentials stay on your own device and are never uploaded to us. However, the app does send non-anonymous usage data — including your X user ID, your handle, and which posts you view — to the third-party analytics service PostHog. See section 2.</p></div>
+<div class="note"><p><strong>In one sentence:</strong> your X credentials stay on your own device and are never uploaded to us. Usage analytics is reported under a random identifier unrelated to your X account, so no record can be traced back to your real identity. See section 2.</p></div>
 
 <h2>1. What the app does not do</h2>
 <ul>
@@ -205,20 +206,21 @@ section[lang]:not(.on),span[lang]:not(.on){display:none}
 </ul>
 
 <h3>2.2 Usage analytics (sent to PostHog)</h3>
-<p>The app uses <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog</a> to analyse feature usage. Data is sent to its servers in the United States (<code>us.i.posthog.com</code>) and includes:</p>
+<p>The app uses <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog</a> to analyse feature usage. Data is sent to its servers in the United States (<code>us.i.posthog.com</code>).</p>
+<p><strong>This data is reported anonymously.</strong> The identifier used to distinguish users is a UUID generated randomly on your device, with no mathematical or logical relationship to your X account. The mapping from X account to that random ID is held only in your device's Keychain and never leaves it. Your X identity therefore does not exist on, and cannot be derived from, the analytics service. What is reported:</p>
 
 <div class="tablewrap"><table>
 <thead><tr><th>Category</th><th>Details</th><th>Purpose</th></tr></thead>
 <tbody>
-<tr><td>Account identifier</td><td>Your X user ID and X username (handle)</td><td>Distinguish usage between users</td></tr>
-<tr><td>Browsing behaviour</td><td>IDs of posts you view, the ID and username of each post's author, which timeline it came from, whether it contains media</td><td>Understand content consumption, improve the browsing experience</td></tr>
+<tr><td>Anonymous identifier</td><td>A UUID generated randomly on your device</td><td>Distinguish usage between users</td></tr>
+<tr><td>Browsing behaviour</td><td>IDs of posts you view, the ID of each post's author, which timeline it came from, whether it contains media</td><td>Understand content consumption, improve the browsing experience</td></tr>
 <tr><td>Interaction events</td><td>Likes, bookmarks, retweets, replies, translations, caching, search, timeline switches, entering fullscreen, and similar actions</td><td>Understand feature adoption</td></tr>
-<tr><td>Outbound links</td><td>The URL of any external link you open from a post</td><td>Diagnose link-opening failures</td></tr>
+<tr><td>Outbound links</td><td>The <strong>domain</strong> of any external link you open (never the path or query string)</td><td>Diagnose link-opening failures</td></tr>
 <tr><td>Device and app info</td><td>Device model, OS version, app version, language, launch and foreground/background events</td><td>Compatibility and stability</td></tr>
 </tbody>
 </table></div>
 
-<div class="note"><p><strong>Please note carefully:</strong> this analytics data is linked to your X user ID and is therefore <strong>not anonymous</strong>. It means a record exists on PostHog of which posts a given X account has viewed. We do not use this data for any purpose other than analytics and do not share it with third parties, but you are entitled to know it exists. If this is not acceptable to you, please do not use the app.</p></div>
+<div class="note"><p><strong>What is never reported:</strong> your X user ID, your X username (handle), the usernames of authors you view, and the full URLs of external links are <strong>not</strong> sent to the analytics service. Your credentials never leave the device under any circumstances. The app contains no advertising SDKs, performs no cross-app or cross-site tracking, and does not request App Tracking Transparency permission.</p></div>
 
 <h3>2.3 Local data on your device</h3>
 <p>The following never leaves your device:</p>
@@ -253,7 +255,7 @@ section[lang]:not(.on),span[lang]:not(.on){display:none}
 <h2>5. International transfer and retention</h2>
 <ul>
   <li>Analytics data is stored on PostHog servers in the <strong>United States</strong>. If you are in the EEA, the UK or elsewhere, this constitutes an international transfer.</li>
-  <li>Retention follows PostHog's default policy. You may ask us at any time to delete all analytics records linked to your X user ID.</li>
+  <li>Retention follows PostHog's default policy. As the data is anonymised, it contains no field that could be used to locate you.</li>
   <li>Local data is removed when you delete the app.</li>
 </ul>
 
@@ -261,8 +263,8 @@ section[lang]:not(.on),span[lang]:not(.on){display:none}
 <ul>
   <li><strong>Delete credentials:</strong> sign out in the app; the corresponding Keychain entries are cleared immediately.</li>
   <li><strong>Clear local data:</strong> Settings offers "Clear image cache" and "Clear read history"; cached posts can be deleted individually or all at once from the cache list.</li>
-  <li><strong>Delete analytics data:</strong> email the address below with your X username and we will delete all PostHog records linked to that account within 30 days.</li>
-  <li><strong>Access and correction:</strong> you may request a copy of the analytics data linked to you.</li>
+  <li><strong>Reset your analytics identifier:</strong> signing out also clears the random analytics ID stored on your device. Signing in again generates a fresh one, and earlier records cannot be associated with it. This is the most complete way to break the association, and you can do it yourself.</li>
+  <li><strong>About deletion requests:</strong> because the analytics data contains nothing that identifies you, we cannot locate records belonging to you and therefore cannot perform individual deletion or export. This is an unavoidable consequence of anonymisation, and it also means the data does not constitute personal data under the GDPR. You are welcome to write to us if you would like to verify this.</li>
   <li>If you are in the EEA or UK you additionally have GDPR rights to object to and restrict processing and to data portability. If you are a California resident you have CCPA rights to know and to delete. We never sell personal information.</li>
 </ul>
 
@@ -283,8 +285,8 @@ section[lang]:not(.on),span[lang]:not(.on){display:none}
 </section>
 
 <footer>
-  <span lang="zh" class="on">© 2026 TweeTok · 本页最后更新于 2026 年 9 月 5 日</span>
-  <span lang="en">© 2026 TweeTok · Last updated 5 September 2026</span>
+  <span lang="zh" class="on">© 2026 TweeTok · 本页最后更新于 2026 年 9 月 7 日</span>
+  <span lang="en">© 2026 TweeTok · Last updated 7 September 2026</span>
 </footer>
 
 </div>
