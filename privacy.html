@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TweeTok 隐私政策 / Privacy Policy</title>
+<style>
+:root{
+  --bg:#fbfbfa; --surface:#fff; --text:#1a1a19; --muted:#6b6b66;
+  --line:#e4e4e0; --accent:#1f6feb; --warn-bg:#fff8e6; --warn-line:#e8d08a;
+  --code-bg:#f2f2ef;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#151514; --surface:#1e1e1c; --text:#eaeae6; --muted:#a0a099;
+    --line:#33332f; --accent:#6aa3f5; --warn-bg:#2a2413; --warn-line:#5c4f22;
+    --code-bg:#262623;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#151514; --surface:#1e1e1c; --text:#eaeae6; --muted:#a0a099;
+  --line:#33332f; --accent:#6aa3f5; --warn-bg:#2a2413; --warn-line:#5c4f22;
+  --code-bg:#262623;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:760px;margin:0 auto;padding:32px 20px 80px}
+header{border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:32px}
+.top{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+h1{font-size:26px;margin:0 0 6px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:14px;margin:0}
+.langs{display:flex;gap:2px;border:1px solid var(--line);border-radius:8px;padding:2px;background:var(--surface);flex:none}
+.langs button{
+  appearance:none;border:0;background:transparent;color:var(--muted);
+  font:inherit;font-size:13px;padding:5px 12px;border-radius:6px;cursor:pointer;
+}
+.langs button[aria-pressed="true"]{background:var(--accent);color:#fff}
+h2{font-size:19px;margin:38px 0 12px;letter-spacing:-.005em}
+h3{font-size:15px;margin:24px 0 8px;color:var(--muted);font-weight:600}
+p,li{font-size:15px}
+ul{padding-left:22px;margin:12px 0}
+li{margin:6px 0}
+a{color:var(--accent)}
+code{background:var(--code-bg);padding:1px 5px;border-radius:4px;font-size:13px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.tablewrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:520px;background:var(--surface)}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:top}
+th{font-weight:600;background:var(--code-bg)}
+tr:last-child td{border-bottom:0}
+.note{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:10px;padding:14px 18px;margin:20px 0}
+.note p{margin:0;font-size:14px}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+section[lang]:not(.on),span[lang]:not(.on){display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div>
+      <h1>TweeTok</h1>
+      <p class="sub"><span lang="zh" class="on">隐私政策</span><span lang="en">Privacy Policy</span> · <span lang="zh" class="on">生效日期：2026 年 9 月 5 日</span><span lang="en">Effective: 5 September 2026</span></p>
+    </div>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" data-lang="zh" aria-pressed="true">中文</button>
+      <button type="button" data-lang="en" aria-pressed="false">English</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== 中文 ===================== -->
+<section lang="zh" class="on">
+
+<p>TweeTok（下称「本应用」）是一款独立开发的第三方媒体浏览工具。本政策说明本应用收集哪些信息、为什么收集、存放在哪里，以及你如何控制这些信息。</p>
+
+<div class="note"><p><strong>一句话概括：</strong>你的 X 登录凭据只保存在你自己的设备上，我们看不到，也永远不会上传。但本应用确实会把匿名之外的使用数据——包括你的 X 用户 ID、handle，以及你浏览了哪些推文——发送给第三方分析服务 PostHog。详见第 2 节。</p></div>
+
+<h2>1. 本应用不做什么</h2>
+<ul>
+  <li>不收集、不接触、不传输你的 X 账号密码。登录全程在 X 官方网页中完成。</li>
+  <li>不运营任何存放你内容或凭据的服务器。</li>
+  <li>不出售、不出租、不交易任何个人数据。</li>
+  <li>不做跨应用或跨网站的广告追踪，不使用 App Tracking Transparency 追踪权限，不接入任何广告 SDK。</li>
+  <li>不收集你的位置、通讯录、日历、健康或财务数据。</li>
+</ul>
+
+<h2>2. 本应用收集什么</h2>
+
+<h3>2.1 X 登录凭据（仅存于你的设备）</h3>
+<p>你在应用内的 X 官方登录页完成登录后，本应用会保留 X 返回的会话凭据（<code>auth_token</code>、<code>ct0</code>、<code>twid</code>），用于代表你请求你自己的时间线内容。</p>
+<ul>
+  <li><strong>存放位置：</strong>你设备上的 iOS Keychain，由系统加密。</li>
+  <li><strong>是否上传：</strong>否。这些凭据不会发送给我们或任何第三方，唯一的去向是 X 自己的服务器。</li>
+  <li><strong>例外：</strong>若你主动使用「连接 Apple TV」功能，凭据会在你的本地网络内、在你的两台设备之间直接传输，不经过互联网。</li>
+</ul>
+
+<h3>2.2 使用分析数据（发送给 PostHog）</h3>
+<p>本应用使用 <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog</a> 分析功能使用情况，数据发送至其位于美国的服务器（<code>us.i.posthog.com</code>）。上报内容包括：</p>
+
+<div class="tablewrap"><table>
+<thead><tr><th>类别</th><th>具体内容</th><th>用途</th></tr></thead>
+<tbody>
+<tr><td>账号标识</td><td>你的 X 用户 ID 与 X 用户名（handle）</td><td>区分不同用户的使用情况</td></tr>
+<tr><td>浏览行为</td><td>你查看的推文 ID、该推文作者的 ID 与用户名、所在时间线、是否含媒体</td><td>了解内容消费方式，优化浏览体验</td></tr>
+<tr><td>操作事件</td><td>点赞、收藏、转发、评论、翻译、缓存、搜索、切换时间线、进入全屏等动作</td><td>了解功能使用率</td></tr>
+<tr><td>外链点击</td><td>你在应用内点开的推文外部链接地址</td><td>诊断链接打开失败</td></tr>
+<tr><td>设备与应用信息</td><td>设备型号、系统版本、应用版本、语言、启动与前后台切换事件</td><td>兼容性与稳定性排查</td></tr>
+</tbody>
+</table></div>
+
+<div class="note"><p><strong>请特别注意：</strong>上述分析数据与你的 X 用户 ID 相关联，因此<strong>不是匿名的</strong>。这意味着 PostHog 上存有一份「某个 X 账号浏览过哪些推文」的记录。我们不会将这份数据用于分析之外的任何目的，也不会与第三方共享，但你有权知道它的存在。如果你不接受这一点，请不要使用本应用。</p></div>
+
+<h3>2.3 保存在你设备上的本地数据</h3>
+<p>以下数据只存在于你的设备，不会离开设备：</p>
+<ul>
+  <li>你主动离线缓存的推文正文、图片与媒体封面（存于应用的 Documents 目录）</li>
+  <li>图片与视频的临时缓存</li>
+  <li>已读记录、时间线偏好、筛选设置等本地偏好</li>
+  <li>多账号列表</li>
+</ul>
+<p>这些离线缓存文件可以通过 iOS「文件」App，在「我的 iPhone → TweeTok」中直接查看、导出或删除，无需经过我们。</p>
+
+<h2>3. 系统权限</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>权限</th><th>何时使用</th><th>是否读取你的数据</th></tr></thead>
+<tbody>
+<tr><td>相册（仅添加）</td><td>仅在你点击保存图片或视频时</td><td>否，只写入，不读取相册内容</td></tr>
+<tr><td>相机</td><td>仅用于扫描 Apple TV 上显示的配对二维码</td><td>否，不保存也不上传任何影像</td></tr>
+<tr><td>本地网络</td><td>仅用于向同一网络内已配对的 Apple TV 传输账号会话</td><td>否，不扫描网络中的其他设备</td></tr>
+</tbody>
+</table></div>
+
+<h2>4. 第三方服务</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>服务</th><th>作用</th><th>隐私政策</th></tr></thead>
+<tbody>
+<tr><td>X（X Corp.）</td><td>本应用展示的全部内容的来源。你与 X 的关系受 X 自己的条款与隐私政策约束。</td><td><a href="https://x.com/en/privacy" target="_blank" rel="noopener">x.com/en/privacy</a></td></tr>
+<tr><td>PostHog</td><td>产品使用分析（见第 2.2 节）</td><td><a href="https://posthog.com/privacy" target="_blank" rel="noopener">posthog.com/privacy</a></td></tr>
+</tbody>
+</table></div>
+<p>本应用不接入广告网络、崩溃归因 SDK 或任何数据经纪服务。</p>
+
+<h2>5. 数据跨境传输与保留</h2>
+<ul>
+  <li>分析数据存放在 PostHog 位于<strong>美国</strong>的服务器上。若你身处欧洲经济区、英国或其他地区，这构成一次跨境传输。</li>
+  <li>分析数据的保留期遵循 PostHog 的默认策略；你可随时要求我们删除与你的 X 用户 ID 关联的全部分析记录。</li>
+  <li>本地数据在你卸载应用时随之删除。</li>
+</ul>
+
+<h2>6. 你的权利与控制方式</h2>
+<ul>
+  <li><strong>删除登录凭据：</strong>在应用内退出登录，Keychain 中的对应凭据会被立即清除。</li>
+  <li><strong>清除本地缓存：</strong>设置页提供「清除图片缓存」与「清除已读记录」；离线缓存的推文可在缓存列表中单条或全部删除。</li>
+  <li><strong>删除分析数据：</strong>发邮件到下方联系邮箱，附上你的 X 用户名，我们会在 30 天内删除 PostHog 上与该账号关联的全部记录。</li>
+  <li><strong>访问与更正：</strong>你可以要求我们提供一份与你关联的分析数据副本。</li>
+  <li>如你位于欧洲经济区或英国，你另享有 GDPR 下的反对处理、限制处理与数据可携权；如你位于加利福尼亚州，你享有 CCPA 下的知情与删除权（我们从不出售个人信息）。</li>
+</ul>
+
+<h2>7. 儿童</h2>
+<p>本应用不面向 13 岁以下儿童，也不会有意收集其个人信息。本应用展示的是 X 上未经审查的用户生成内容，其中可能包含不适宜未成年人的内容，App Store 分级为 17+。若你认为一名儿童向我们提供了个人信息，请联系我们，我们会予以删除。</p>
+
+<h2>8. 与 X Corp. 的关系</h2>
+<p>TweeTok 是独立开发的第三方浏览工具，与 X Corp. <strong>无任何关联</strong>，未获其认可、赞助或授权。「X」及相关标识是 X Corp. 的商标。使用本应用需要你自己的 X 账号，应用内展示的所有内容均来自 X 平台，版权归各自原作者所有。本应用不托管、不生成、不分发任何内容。</p>
+
+<h2>9. 政策变更</h2>
+<p>本政策如有变更，我们会更新本页顶部的生效日期。涉及数据处理方式的重大变更，会在应用内以显著方式告知。</p>
+
+<h2>10. 联系我们</h2>
+<p>关于本政策的任何疑问、数据访问或删除请求，请联系：<br>
+<a href="mailto:wym572@gmail.com">wym572@gmail.com</a></p>
+<p>我们会在 30 天内回复。</p>
+
+</section>
+
+<!-- ===================== English ===================== -->
+<section lang="en">
+
+<p>TweeTok (the "app") is an independently developed third-party media viewer. This policy explains what information the app collects, why, where it is stored, and how you can control it.</p>
+
+<div class="note"><p><strong>In one sentence:</strong> your X credentials stay on your own device and are never uploaded to us. However, the app does send non-anonymous usage data — including your X user ID, your handle, and which posts you view — to the third-party analytics service PostHog. See section 2.</p></div>
+
+<h2>1. What the app does not do</h2>
+<ul>
+  <li>It does not collect, handle or transmit your X password. Sign-in happens entirely on X's own web page.</li>
+  <li>It does not operate any server that stores your content or credentials.</li>
+  <li>It does not sell, rent or trade any personal data.</li>
+  <li>It does not perform cross-app or cross-site advertising tracking, does not request App Tracking Transparency permission, and contains no advertising SDKs.</li>
+  <li>It does not collect your location, contacts, calendar, health or financial data.</li>
+</ul>
+
+<h2>2. What the app collects</h2>
+
+<h3>2.1 X credentials (device only)</h3>
+<p>After you sign in through X's official login page inside the app, the app retains the session credentials returned by X (<code>auth_token</code>, <code>ct0</code>, <code>twid</code>) in order to request your own timeline on your behalf.</p>
+<ul>
+  <li><strong>Where:</strong> the iOS Keychain on your device, encrypted by the system.</li>
+  <li><strong>Uploaded?</strong> No. These credentials are never sent to us or to any third party; the only destination is X's own servers.</li>
+  <li><strong>Exception:</strong> if you choose to use "Pair with Apple TV", the credentials are transferred directly between your two devices over your local network. They do not traverse the internet.</li>
+</ul>
+
+<h3>2.2 Usage analytics (sent to PostHog)</h3>
+<p>The app uses <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog</a> to analyse feature usage. Data is sent to its servers in the United States (<code>us.i.posthog.com</code>) and includes:</p>
+
+<div class="tablewrap"><table>
+<thead><tr><th>Category</th><th>Details</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td>Account identifier</td><td>Your X user ID and X username (handle)</td><td>Distinguish usage between users</td></tr>
+<tr><td>Browsing behaviour</td><td>IDs of posts you view, the ID and username of each post's author, which timeline it came from, whether it contains media</td><td>Understand content consumption, improve the browsing experience</td></tr>
+<tr><td>Interaction events</td><td>Likes, bookmarks, retweets, replies, translations, caching, search, timeline switches, entering fullscreen, and similar actions</td><td>Understand feature adoption</td></tr>
+<tr><td>Outbound links</td><td>The URL of any external link you open from a post</td><td>Diagnose link-opening failures</td></tr>
+<tr><td>Device and app info</td><td>Device model, OS version, app version, language, launch and foreground/background events</td><td>Compatibility and stability</td></tr>
+</tbody>
+</table></div>
+
+<div class="note"><p><strong>Please note carefully:</strong> this analytics data is linked to your X user ID and is therefore <strong>not anonymous</strong>. It means a record exists on PostHog of which posts a given X account has viewed. We do not use this data for any purpose other than analytics and do not share it with third parties, but you are entitled to know it exists. If this is not acceptable to you, please do not use the app.</p></div>
+
+<h3>2.3 Local data on your device</h3>
+<p>The following never leaves your device:</p>
+<ul>
+  <li>Posts, images and media posters you explicitly cache for offline use (stored in the app's Documents directory)</li>
+  <li>Temporary image and video caches</li>
+  <li>Read history, timeline preferences and filter settings</li>
+  <li>Your list of signed-in accounts</li>
+</ul>
+<p>These offline files are browsable directly in the iOS Files app under "On My iPhone → TweeTok", where you can inspect, export or delete them yourself without going through us.</p>
+
+<h2>3. System permissions</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Permission</th><th>When it is used</th><th>Does it read your data?</th></tr></thead>
+<tbody>
+<tr><td>Photo Library (add only)</td><td>Only when you tap Save on an image or video</td><td>No — write only; the app never reads your library</td></tr>
+<tr><td>Camera</td><td>Only to scan the pairing QR code shown by the Apple TV app</td><td>No image is stored or uploaded</td></tr>
+<tr><td>Local Network</td><td>Only to transfer your session to a paired Apple TV on the same network</td><td>No — the app does not scan for other devices</td></tr>
+</tbody>
+</table></div>
+
+<h2>4. Third-party services</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Service</th><th>Role</th><th>Privacy policy</th></tr></thead>
+<tbody>
+<tr><td>X (X Corp.)</td><td>The source of all content shown in the app. Your relationship with X is governed by X's own terms and privacy policy.</td><td><a href="https://x.com/en/privacy" target="_blank" rel="noopener">x.com/en/privacy</a></td></tr>
+<tr><td>PostHog</td><td>Product usage analytics (see section 2.2)</td><td><a href="https://posthog.com/privacy" target="_blank" rel="noopener">posthog.com/privacy</a></td></tr>
+</tbody>
+</table></div>
+<p>The app integrates no ad networks, no crash-attribution SDKs and no data brokers.</p>
+
+<h2>5. International transfer and retention</h2>
+<ul>
+  <li>Analytics data is stored on PostHog servers in the <strong>United States</strong>. If you are in the EEA, the UK or elsewhere, this constitutes an international transfer.</li>
+  <li>Retention follows PostHog's default policy. You may ask us at any time to delete all analytics records linked to your X user ID.</li>
+  <li>Local data is removed when you delete the app.</li>
+</ul>
+
+<h2>6. Your rights and controls</h2>
+<ul>
+  <li><strong>Delete credentials:</strong> sign out in the app; the corresponding Keychain entries are cleared immediately.</li>
+  <li><strong>Clear local data:</strong> Settings offers "Clear image cache" and "Clear read history"; cached posts can be deleted individually or all at once from the cache list.</li>
+  <li><strong>Delete analytics data:</strong> email the address below with your X username and we will delete all PostHog records linked to that account within 30 days.</li>
+  <li><strong>Access and correction:</strong> you may request a copy of the analytics data linked to you.</li>
+  <li>If you are in the EEA or UK you additionally have GDPR rights to object to and restrict processing and to data portability. If you are a California resident you have CCPA rights to know and to delete. We never sell personal information.</li>
+</ul>
+
+<h2>7. Children</h2>
+<p>The app is not directed at children under 13 and does not knowingly collect their personal information. It displays unmoderated user-generated content from X, which may include material unsuitable for minors; its App Store rating is 17+. If you believe a child has provided us with personal information, please contact us and we will delete it.</p>
+
+<h2>8. Relationship with X Corp.</h2>
+<p>TweeTok is an independently developed third-party viewer. It is <strong>not affiliated with</strong>, endorsed by, sponsored by or authorised by X Corp. "X" and related marks are trademarks of X Corp. You need your own X account to use the app. All content shown originates from X and remains the property of its respective authors. The app hosts, generates and distributes no content of its own.</p>
+
+<h2>9. Changes to this policy</h2>
+<p>If this policy changes we will update the effective date at the top of this page. Material changes to how data is processed will be announced prominently within the app.</p>
+
+<h2>10. Contact</h2>
+<p>For questions about this policy, or to request access to or deletion of your data:<br>
+<a href="mailto:wym572@gmail.com">wym572@gmail.com</a></p>
+<p>We respond within 30 days.</p>
+
+</section>
+
+<footer>
+  <span lang="zh" class="on">© 2026 TweeTok · 本页最后更新于 2026 年 9 月 5 日</span>
+  <span lang="en">© 2026 TweeTok · Last updated 5 September 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var btns = document.querySelectorAll('.langs button');
+  function set(lang){
+    document.documentElement.lang = (lang === 'zh') ? 'zh-Hans' : 'en';
+    document.querySelectorAll('section[lang],span[lang]').forEach(function(el){
+      if (el.closest('.langs')) return;
+      var l = el.getAttribute('lang');
+      if (l === 'zh' || l === 'en') el.classList.toggle('on', l === lang);
+    });
+    btns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+    try { localStorage.setItem('tweetok-privacy-lang', lang); } catch (e) {}
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){ set(b.dataset.lang); }); });
+  var saved = null;
+  try { saved = localStorage.getItem('tweetok-privacy-lang'); } catch (e) {}
+  if (!saved) saved = (navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+  set(saved);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TweeTok 支持 / Support</title>
+<style>
+:root{
+  --bg:#fbfbfa; --surface:#fff; --text:#1a1a19; --muted:#6b6b66;
+  --line:#e4e4e0; --accent:#1f6feb; --warn-bg:#fff8e6; --warn-line:#e8d08a;
+  --code-bg:#f2f2ef;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#151514; --surface:#1e1e1c; --text:#eaeae6; --muted:#a0a099;
+    --line:#33332f; --accent:#6aa3f5; --warn-bg:#2a2413; --warn-line:#5c4f22;
+    --code-bg:#262623;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#151514; --surface:#1e1e1c; --text:#eaeae6; --muted:#a0a099;
+  --line:#33332f; --accent:#6aa3f5; --warn-bg:#2a2413; --warn-line:#5c4f22;
+  --code-bg:#262623;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:760px;margin:0 auto;padding:32px 20px 80px}
+header{border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:32px}
+.top{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+h1{font-size:26px;margin:0 0 6px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:14px;margin:0}
+.langs{display:flex;gap:2px;border:1px solid var(--line);border-radius:8px;padding:2px;background:var(--surface);flex:none}
+.langs button{
+  appearance:none;border:0;background:transparent;color:var(--muted);
+  font:inherit;font-size:13px;padding:5px 12px;border-radius:6px;cursor:pointer;
+}
+.langs button[aria-pressed="true"]{background:var(--accent);color:#fff}
+h2{font-size:19px;margin:38px 0 12px;letter-spacing:-.005em}
+h3{font-size:15px;margin:24px 0 8px;color:var(--muted);font-weight:600}
+p,li{font-size:15px}
+ul{padding-left:22px;margin:12px 0}
+li{margin:6px 0}
+a{color:var(--accent)}
+code{background:var(--code-bg);padding:1px 5px;border-radius:4px;font-size:13px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.tablewrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:520px;background:var(--surface)}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:top}
+th{font-weight:600;background:var(--code-bg)}
+tr:last-child td{border-bottom:0}
+.note{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:10px;padding:14px 18px;margin:20px 0}
+.note p{margin:0;font-size:14px}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+section[lang]:not(.on),span[lang]:not(.on){display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div>
+      <h1>TweeTok</h1>
+      <p class="sub"><span lang="zh" class="on">支持与帮助</span><span lang="en">Support</span></p>
+    </div>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" data-lang="zh" aria-pressed="true">中文</button>
+      <button type="button" data-lang="en" aria-pressed="false">English</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== 中文 ===================== -->
+<section lang="zh" class="on">
+
+<div class="note"><p><strong>联系我们：</strong><a href="mailto:wym572@gmail.com">wym572@gmail.com</a><br>我们会在 3 个工作日内回复；涉及数据访问或删除的请求，最长 30 天内处理完毕。</p></div>
+
+<p>TweeTok 是一款独立开发的第三方媒体浏览工具，帮你以全屏沉浸的方式浏览你在 X 上关注的图片和视频内容。</p>
+
+<h2>常见问题</h2>
+
+<h3>提示需要重新登录，或时间线突然加载不出来</h3>
+<p>这通常是 X 的会话凭据过期了。凭据由 X 签发并控制有效期，我们无法延长。请在「我的 → 账号」中退出该账号后重新登录。如果反复出现，可能是该账号在 X 侧触发了风控，建议先用浏览器登录 x.com 确认账号状态正常。</p>
+
+<h3>时间线是空的</h3>
+<p>请确认该账号在 X 上确实关注了一些用户。若你正在查看的是「列表」时间线，请确认该列表内有成员且成员近期有发帖。也可以下拉刷新重试。</p>
+
+<h3>视频不播放，或只有画面没有声音</h3>
+<p>请先确认设备没有开启静音开关。若视频始终停在加载状态，多为网络问题，切换网络后重试。个别推文的视频可能已被作者删除或设为受限，此时在 X 官方应用中同样无法播放。</p>
+
+<h3>Apple TV 配对失败</h3>
+<p>请确认三点：iPhone 与 Apple TV 连接在<strong>同一个 Wi-Fi 网络</strong>；已在 iOS 的「设置 → TweeTok」中允许「本地网络」权限；已允许「相机」权限以扫描二维码。若仍失败，将两端应用都完全退出后重开再试。</p>
+
+<h3>如何清除缓存和本地数据</h3>
+<ul>
+  <li><strong>图片缓存：</strong>「我的 → 设置 → 清除图片缓存」</li>
+  <li><strong>已读记录：</strong>「我的 → 设置 → 已读筛选 → 清除已读记录」</li>
+  <li><strong>离线缓存的推文：</strong>在离线缓存列表中左滑单条删除，或点右上角「清除全部缓存」</li>
+  <li><strong>登录凭据：</strong>退出登录即从设备的 Keychain 中清除</li>
+  <li>离线缓存的文件也可以通过 iOS「文件」App，在「我的 iPhone → TweeTok」中直接查看和删除</li>
+</ul>
+
+<h3>如何删除你在分析服务上的数据</h3>
+<p>发邮件到 <a href="mailto:wym572@gmail.com">wym572@gmail.com</a>，附上你的 X 用户名，我们会在 30 天内删除与该账号关联的全部分析记录。详见<a href="./privacy.html">隐私政策</a>。</p>
+
+<h3>为什么需要相机和本地网络权限</h3>
+<p>相机仅用于扫描 Apple TV 上显示的配对二维码；本地网络仅用于在同一网络内向已配对的 Apple TV 传输账号会话。两项权限都不会用于其他目的，拒绝授权不影响 iPhone 上的正常浏览。详见<a href="./privacy.html">隐私政策</a>。</p>
+
+<h3>能发推文吗</h3>
+<p>本应用定位是浏览工具，支持点赞、收藏、转发、引用转发和评论，但不支持发布原创推文。</p>
+
+<h2>报告问题</h2>
+<p>发现 Bug、想反馈内容问题，或有功能建议，请发邮件到 <a href="mailto:wym572@gmail.com">wym572@gmail.com</a>。为便于排查，请尽量附上：设备型号与 iOS 版本、应用版本（在「我的 → 设置」底部）、问题的复现步骤，以及截图或录屏。</p>
+
+<h2>相关链接</h2>
+<ul>
+  <li><a href="./privacy.html">隐私政策</a></li>
+</ul>
+
+<h2>关于</h2>
+<p>TweeTok 是独立开发的第三方浏览工具，与 X Corp. 无任何关联，未获其认可、赞助或授权。「X」及相关标识是 X Corp. 的商标。使用本应用需要你自己的 X 账号，应用内展示的所有内容均来自 X 平台，版权归各自原作者所有。</p>
+
+</section>
+
+<!-- ===================== English ===================== -->
+<section lang="en">
+
+<div class="note"><p><strong>Contact:</strong> <a href="mailto:wym572@gmail.com">wym572@gmail.com</a><br>We reply within 3 business days. Requests involving data access or deletion are completed within 30 days.</p></div>
+
+<p>TweeTok is an independently developed third-party media viewer that lets you browse the photos and videos from the accounts you follow on X, full screen.</p>
+
+<h2>Frequently asked questions</h2>
+
+<h3>I'm asked to sign in again, or the timeline suddenly stops loading</h3>
+<p>Your X session credentials have most likely expired. They are issued and expired by X, and we cannot extend them. Sign out of the account under "Profile → Accounts" and sign in again. If this recurs, the account may have been flagged on X's side — sign in to x.com in a browser first to confirm the account is in good standing.</p>
+
+<h3>My timeline is empty</h3>
+<p>Check that the account actually follows someone on X. If you are viewing a List timeline, check that the list has members and that they have posted recently. Pull to refresh to retry.</p>
+
+<h3>A video won't play, or plays without sound</h3>
+<p>First check that your device's silent switch is off. A video stuck loading is usually a network issue — switch networks and retry. Some videos may have been deleted or restricted by their author, in which case they will not play in X's own app either.</p>
+
+<h3>Apple TV pairing fails</h3>
+<p>Check three things: your iPhone and Apple TV are on the <strong>same Wi-Fi network</strong>; Local Network permission is granted under iOS Settings → TweeTok; and Camera permission is granted so the QR code can be scanned. If it still fails, fully quit both apps and try again.</p>
+
+<h3>How do I clear caches and local data?</h3>
+<ul>
+  <li><strong>Image cache:</strong> Profile → Settings → Clear Image Cache</li>
+  <li><strong>Read history:</strong> Profile → Settings → Read Filter → Clear Read History</li>
+  <li><strong>Cached posts:</strong> swipe to delete individually in the Offline Cache list, or tap Clear All Cache</li>
+  <li><strong>Credentials:</strong> signing out clears them from the device Keychain</li>
+  <li>Offline files can also be inspected and deleted directly in the iOS Files app under "On My iPhone → TweeTok"</li>
+</ul>
+
+<h3>How do I delete my analytics data?</h3>
+<p>Email <a href="mailto:wym572@gmail.com">wym572@gmail.com</a> with your X username and we will delete all analytics records linked to that account within 30 days. See the <a href="./privacy.html">Privacy Policy</a> for details.</p>
+
+<h3>Why does the app need Camera and Local Network access?</h3>
+<p>Camera is used solely to scan the pairing QR code shown by the Apple TV app. Local Network is used solely to transfer your session to a paired Apple TV on the same network. Neither is used for anything else, and declining them does not affect normal browsing on iPhone. See the <a href="./privacy.html">Privacy Policy</a>.</p>
+
+<h3>Can I post from the app?</h3>
+<p>TweeTok is a viewer. You can like, bookmark, retweet, quote-tweet and reply, but composing original posts is not supported.</p>
+
+<h2>Reporting a problem</h2>
+<p>To report a bug, flag a content issue, or suggest a feature, email <a href="mailto:wym572@gmail.com">wym572@gmail.com</a>. To help us investigate, please include your device model and iOS version, the app version (at the bottom of Profile → Settings), steps to reproduce, and a screenshot or screen recording where possible.</p>
+
+<h2>Links</h2>
+<ul>
+  <li><a href="./privacy.html">Privacy Policy</a></li>
+</ul>
+
+<h2>About</h2>
+<p>TweeTok is an independently developed third-party viewer. It is not affiliated with, endorsed by, sponsored by or authorised by X Corp. "X" and related marks are trademarks of X Corp. You need your own X account to use the app. All content shown originates from X and remains the property of its respective authors.</p>
+
+</section>
+
+<footer>
+  <span lang="zh" class="on">© 2026 TweeTok</span>
+  <span lang="en">© 2026 TweeTok</span>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var btns = document.querySelectorAll('.langs button');
+  function set(lang){
+    document.documentElement.lang = (lang === 'zh') ? 'zh-Hans' : 'en';
+    document.querySelectorAll('section[lang],span[lang]').forEach(function(el){
+      if (el.closest('.langs')) return;
+      var l = el.getAttribute('lang');
+      if (l === 'zh' || l === 'en') el.classList.toggle('on', l === lang);
+    });
+    btns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+    try { localStorage.setItem('tweetok-support-lang', lang); } catch (e) {}
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){ set(b.dataset.lang); }); });
+  var saved = null;
+  try { saved = localStorage.getItem('tweetok-support-lang'); } catch (e) {}
+  if (!saved) saved = (navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+  set(saved);
+})();
+</script>
+</body>
+</html>
