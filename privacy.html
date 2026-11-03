@@ -105,7 +105,7 @@ section[lang]:not(.on),span[lang]:not(.on){display:none}
 
 <h3>2.3 使用分析数据（发送给 PostHog）</h3>
 <p>本应用使用 <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog</a> 分析功能使用情况，数据发送至其位于美国的服务器（<code>us.i.posthog.com</code>）。目前应用内没有关闭分析的开关。</p>
-<p>用于区分用户的标识是一个在你设备上随机生成的 ID。「X 账号 → 随机 ID」的对应关系只保存在你的设备上。我们不会把你的 X 用户名或密码作为分析数据发送。不过，事件中含有帖子 ID 和作者 ID；如果你浏览的是自己的帖子，作者 ID 就是你本人的 X ID。结合 X 上的公开信息，这些记录理论上可能被用于推断身份，所以我们不把这些数据称为完全匿名。上报内容包括：</p>
+<p>用于区分用户的标识是一个在你设备上随机生成的 ID。「X 账号 → 随机 ID」的对应关系只保存在你的设备上。我们不会把你的 X 用户名或密码作为分析数据发送。不过，事件中含有帖子 ID 和作者 ID。Android 版从 build 104 起会把你本人的 X ID 从事件中去掉；更早的 Android 版本和 iOS 版在你浏览自己的帖子或主页时，可能发送你本人的 X ID。结合 X 上的公开信息，这些记录理论上可能被用于推断身份，所以我们不把这些数据称为完全匿名。上报内容包括：</p>
 
 <div class="tablewrap"><table>
 <thead><tr><th>类别</th><th>具体内容</th><th>用途</th></tr></thead>
@@ -117,7 +117,7 @@ section[lang]:not(.on),span[lang]:not(.on){display:none}
 <tr><td>举报和拉黑</td><td>被举报的帖子 ID、作者 ID、举报原因；被拉黑的账号 ID</td><td>让我们收到举报并处理</td></tr>
 <tr><td>外链点击</td><td>你点开的外部链接的<strong>域名</strong>（不含路径与查询参数）</td><td>诊断链接打开失败</td></tr>
 <tr><td>诊断信息</td><td>登录或同步失败的原因；所用的同步服务类型、是否加密（不含服务器地址和账号）</td><td>排查故障</td></tr>
-<tr><td>设备与应用信息</td><td>设备型号、系统版本、应用版本、语言、启动与前后台切换事件</td><td>兼容性与稳定性排查</td></tr>
+<tr><td>设备与应用信息</td><td>设备型号、系统版本、应用版本、语言、时区、启动与前后台切换事件</td><td>兼容性与稳定性排查</td></tr>
 <tr><td>大致位置</td><td>PostHog 可能根据网络请求的 IP 地址推断大致位置</td><td>了解使用地区</td></tr>
 </tbody>
 </table></div>
@@ -136,7 +136,7 @@ section[lang]:not(.on),span[lang]:not(.on){display:none}
 </ul>
 
 <h3>2.6 保存在你设备上的本地数据</h3>
-<p>除非你开启云端同步，以下数据只存在于你的设备：</p>
+<p>以下数据保存在你的设备上，我们无法访问。开启云端同步后，其中的资料库、已读记录和相关设置会发送到你的服务器。如果你开启了 Android 设备备份，除登录凭据外的应用数据可能包含在备份中：</p>
 <ul>
   <li>你主动离线缓存的帖子、图片、视频和封面</li>
   <li>图片与视频的临时缓存</li>
@@ -237,7 +237,7 @@ section[lang]:not(.on),span[lang]:not(.on){display:none}
 
 <h3>2.3 Usage analytics (sent to PostHog)</h3>
 <p>The app uses <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog</a> to analyse feature usage. Data is sent to its servers in the United States (<code>us.i.posthog.com</code>). The app currently has no setting to turn analytics off.</p>
-<p>Users are distinguished by an ID generated randomly on your device. The mapping from X account to that ID stays on your device. We do not send your X username or password as analytics data. However, events include post IDs and author IDs, and if you view your own posts the author ID is your own X ID. Combined with public information on X, these records could in theory be used to infer identity, so we do not describe this data as fully anonymous. What is reported:</p>
+<p>Users are distinguished by an ID generated randomly on your device. The mapping from X account to that ID stays on your device. We do not send your X username or password as analytics data. However, events include post IDs and author IDs. From build 104, the Android app removes your own X ID from events; earlier Android builds and the iOS app may send your own X ID when you view your own posts or profile. Combined with public information on X, these records could in theory be used to infer identity, so we do not describe this data as fully anonymous. What is reported:</p>
 
 <div class="tablewrap"><table>
 <thead><tr><th>Category</th><th>Details</th><th>Purpose</th></tr></thead>
@@ -249,7 +249,7 @@ section[lang]:not(.on),span[lang]:not(.on){display:none}
 <tr><td>Reports and blocks</td><td>Reported post ID, author ID and reason; blocked account ID</td><td>So that we receive and can act on reports</td></tr>
 <tr><td>Outbound links</td><td>The <strong>domain</strong> of any external link you open (never the path or query string)</td><td>Diagnose link-opening failures</td></tr>
 <tr><td>Diagnostics</td><td>Reasons for sign-in or sync failures; the type of sync service and whether it is encrypted (not the server address or account)</td><td>Troubleshooting</td></tr>
-<tr><td>Device and app info</td><td>Device model, OS version, app version, language, launch and foreground/background events</td><td>Compatibility and stability</td></tr>
+<tr><td>Device and app info</td><td>Device model, OS version, app version, language, time zone, launch and foreground/background events</td><td>Compatibility and stability</td></tr>
 <tr><td>Approximate location</td><td>PostHog may infer an approximate location from the IP address of the request</td><td>Understand where the app is used</td></tr>
 </tbody>
 </table></div>
@@ -268,7 +268,7 @@ section[lang]:not(.on),span[lang]:not(.on){display:none}
 </ul>
 
 <h3>2.6 Local data on your device</h3>
-<p>Unless you turn on cloud sync, the following stays on your device:</p>
+<p>The following is stored on your device, and we cannot access it. If you turn on cloud sync, your library, read history and related settings are sent to your server. If you have Android device backup turned on, app data other than sign-in credentials may be included in the backup:</p>
 <ul>
   <li>Posts, images, videos and posters you cache for offline use</li>
   <li>Temporary image and video caches</li>
